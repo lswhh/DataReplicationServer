@@ -15,19 +15,13 @@ public class ConfigurationManager {
 	public ConfigurationManager() {
 		// TODO Auto-generated constructor stub
 	}
-//	{ 
-//		"id":123, "name":"Pankaj Kumar", 
-//		"permanent":true, 
-//		"address":[{ 
-//		"street":"El Camino Real", "city":"San Jose", "zipcode":"95014" }], 
-//		"phoneNumbers":["9988664422", "1234567890"], "role":"Developer" 
-//		}
+
 	public boolean jsonTest()
 	{
 		JSONParser parser = new JSONParser();
 		Object obj = null;
 		try {
-				obj = parser.parse(new FileReader("d:\\test.json"));
+				obj = parser.parse(new FileReader("conf/data_replication_server.conf"));
 			JSONObject jsonObject = (JSONObject) obj;
 			String name = (String) jsonObject.get("name");
 			System.out.println("name :: " + name);

@@ -8,7 +8,8 @@ class testJSON {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		ConfigurationManager cm = new ConfigurationManager();
+		assertEquals(cm.jsonTest(),true);
 	}
 
 }
