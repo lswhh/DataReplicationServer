@@ -1,0 +1,68 @@
+{
+	"title": "data replication server basic information",
+	"type": "object",
+	"properties": {
+		"connection": {
+			"title": "database server connection information",
+			"type": "object",
+			"properties": {
+				"from": {
+					"type": "object",
+					"properties": {
+						"jdbcDriverPath": {
+							"type": "string"
+						},
+						"jdbcURL": {
+							"type": "string"
+						},
+						"user": {
+							"type": "string"
+						},
+						"password": {
+							"type": "string"
+						}
+					},
+					"required": ["jdbcDriverPath", "jdbcURL", "user", "password"]
+				},
+				"to": {
+					"type": "object",
+					"properties": {
+						"jdbcDriverPath": {
+							"type": "string"
+						},
+						"jdbcURL": {
+							"type": "string"
+						},
+						"user": {
+							"type": "string"
+						},
+						"password": {
+							"type": "string"
+						}
+					},
+					"required": ["jdbcDriverPath", "jdbcURL", "user", "password"]
+				},
+				"required": ["from", "to"]
+			}
+		},
+		"replicationTables": {
+			"title": "replication table schema",
+		    "type": "object",
+		    "properties": {
+		        "fromUser": {
+		            "type": "string"
+		        },
+		        "fromTable": {
+		            "type": "string"
+		        },
+		        "toUser": {
+		            "type": "string"
+		        },
+		        "toTable": {
+		            "type": "integer"
+		        }
+		    },
+		    "required": ["fromUser", "fromTable", "toUser", "toTable"]
+	    }
+    }
+}
