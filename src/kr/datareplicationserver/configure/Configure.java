@@ -1,5 +1,6 @@
 package kr.datareplicationserver.configure;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Configure {
@@ -8,6 +9,12 @@ public class Configure {
 	public Connection from;
 	public Connection to;
 	public List<ReplicationTable> ReplicationTableList ;
+	
+	public Configure() {
+		from = new Connection();
+		to = new Connection();
+		ReplicationTableList = new LinkedList<ReplicationTable>();
+	}
 	
 	public void print()
 	{
