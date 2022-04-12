@@ -2,6 +2,9 @@
 	"title": "data replication server basic information",
 	"type": "object",
 	"properties": {
+		"name": {
+			"type": "string" 
+		},
 		"connection": {
 			"title": "database server connection information",
 			"type": "object",
@@ -63,6 +66,9 @@
 		        }
 		    },
 		    "required": ["fromUser", "fromTable", "toUser", "toTable"]
-	    }
+	    },
+	    "logPath": {
+			"type": "string" 
+		}
     }
 }
