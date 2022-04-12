@@ -48,9 +48,7 @@ public class ConfigurationManager {
 				
 				JSONObject connection = (JSONObject) jsonObject.get("connection");
 				JSONObject connFrom = (JSONObject) connection.get("from");
-				String tmpStr = (String) connFrom.get("jdbcDriverPath");
-				conf.from.jdbcDriverPath = tmpStr;
-				//conf.from.jdbcDriverPath = (String) connFrom.get("jdbcDriverPath");
+				conf.from.jdbcDriverPath = (String) connFrom.get("jdbcDriverPath");
 				conf.from.jdbcURL = (String) connFrom.get("jdbcURL");
 				conf.from.user = (String) connFrom.get("user");
 				conf.from.passwd = (String) connFrom.get("passwd");
