@@ -3,6 +3,9 @@
  */
 package kr.datareplicationserver;
 
+import kr.datareplicationserver.configure.ConfigurationManager;
+import kr.datareplicationserver.configure.Configure;
+
 /**
  * @author ALTIBASE
  *
@@ -22,6 +25,20 @@ public class StartupManager {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("test");
+		Configure conf = ConfigurationManager.start().build("conf/dataReplicationServer.conf");
+		boolean isExit = false;
+		
+		while (isExit != true)
+		{
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				System.out.println("sleep error : " + e.getMessage());
+			}
+			//sync data
+		}
 	}
 
 }
