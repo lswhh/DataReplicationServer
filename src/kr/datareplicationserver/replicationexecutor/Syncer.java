@@ -1,5 +1,17 @@
 package kr.datareplicationserver.replicationexecutor;
 
-public class Syncer {
+import kr.datareplicationserver.dataextractor.DataExtractorFactoryImpl;
 
+public class Syncer extends Executor {
+
+	public Syncer() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void SyncTable( /* */ ) { // get configure
+		//table sync
+		DataExtractorFactory dataExtractorFactory = new DataExtractorFactoryImpl();
+		dataExtractorFactory.makeDataExtractor(DataExtractorType.SYNC_DATA);
+		
+	}
 }

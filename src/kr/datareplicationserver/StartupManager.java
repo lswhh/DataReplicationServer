@@ -24,7 +24,7 @@ public class StartupManager {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("test");
+		
 		Configure conf = ConfigurationManager.start().build("conf/dataReplicationServer.conf");
 		boolean isExit = false;
 		
@@ -32,6 +32,7 @@ public class StartupManager {
 		{
 			try {
 				Thread.sleep(1000);
+				System.out.println("test");
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

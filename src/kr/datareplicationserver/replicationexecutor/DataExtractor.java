@@ -1,8 +1,6 @@
 package kr.datareplicationserver.replicationexecutor;
 import java.sql.*;
 
-enum DataExtractorType{ SYNC_DATA, CHANGE_DATA }
-
 public interface DataExtractor {
 	
 	/*

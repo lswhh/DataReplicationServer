@@ -43,7 +43,7 @@ public class ConfigurationManager {
 				obj = parser.parse(new FileReader(confPath));
 				JSONObject jsonObject = (JSONObject) obj;
 				String name = (String) jsonObject.get("name");
-				System.out.println("name :: " + name);
+
 				conf.name = name;
 				
 				JSONObject connection = (JSONObject) jsonObject.get("connection");
