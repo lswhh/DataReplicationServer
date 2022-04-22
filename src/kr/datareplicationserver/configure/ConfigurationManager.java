@@ -67,6 +67,7 @@ public class ConfigurationManager {
 				replicationTable.toTable = (String)replicationTables.get("toTable");
 				
 				conf.ReplicationTableList.add(replicationTable);
+				conf.logPath = (String) jsonObject.get("logPath");
 				
 				conf.print();
 

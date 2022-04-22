@@ -11,7 +11,6 @@ public class Syncer extends Executor {
 	public void SyncTable( /* */ ) { // get configure
 		//table sync
 		DataExtractorFactory dataExtractorFactory = new DataExtractorFactoryImpl();
-		dataExtractorFactory.makeDataExtractor(DataExtractorType.SYNC_DATA);
-		
+		DataExtractor syncDataExtractor = dataExtractorFactory.makeDataExtractor(DataExtractorType.SYNC_DATA);
 	}
 }
