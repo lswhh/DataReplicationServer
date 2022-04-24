@@ -5,6 +5,8 @@ package kr.datareplicationserver;
 
 import kr.datareplicationserver.configure.ConfigurationManager;
 import kr.datareplicationserver.configure.Configure;
+import kr.datareplicationserver.database.JdbcDriverManager;
+import kr.datareplicationserver.dataextractor.DriverInitializer;
 
 /**
  * @author ALTIBASE
@@ -28,6 +30,9 @@ public class StartupManager {
 		Configure conf = ConfigurationManager.start().build("conf/dataReplicationServer.conf");
 		boolean isExit = false;
 		
+		DriverInitializer driverInitializer = new JdbcDriverManager(); 
+		driverInitializer.loadDrivers(conf);
+
 		while (isExit != true)
 		{
 			try {

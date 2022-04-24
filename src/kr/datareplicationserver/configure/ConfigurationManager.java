@@ -47,6 +47,8 @@ public class ConfigurationManager {
 				conf.name = name;
 				
 				JSONObject connection = (JSONObject) jsonObject.get("connection");
+				conf.from.name = "from" + ((String) connection.get("name"));
+				conf.to.name = "to" + (String) connection.get("name");
 				JSONObject connFrom = (JSONObject) connection.get("from");
 				conf.from.jdbcDriverPath = (String) connFrom.get("jdbcDriverPath");
 				conf.from.jdbcURL = (String) connFrom.get("jdbcURL");
@@ -81,6 +83,7 @@ public class ConfigurationManager {
 		}
 		return true;
 	}
+	
 	public boolean jsonTest()
 	{
 		JSONParser parser = new JSONParser();

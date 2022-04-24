@@ -9,6 +9,9 @@
 			"title": "database server connection information",
 			"type": "object",
 			"properties": {
+				"name": {
+					"type": "string"
+				},
 				"from": {
 					"type": "object",
 					"properties": {
@@ -45,7 +48,7 @@
 					},
 					"required": ["jdbcDriverPath", "jdbcURL", "user", "password"]
 				},
-				"required": ["from", "to"]
+				"required": ["name", "from", "to"]
 			}
 		},
 		"replicationTables": {

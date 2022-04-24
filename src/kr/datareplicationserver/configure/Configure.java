@@ -3,6 +3,8 @@ package kr.datareplicationserver.configure;
 import java.util.LinkedList;
 import java.util.List;
 
+import kr.datareplicationserver.database.Target;
+
 public class Configure {
 	public String name;
 	public String logPath;

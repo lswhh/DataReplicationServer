@@ -1,6 +1,7 @@
 package kr.datareplicationserver.configure;
 
 public class Connection {
+	public String name;
 	public String jdbcDriverPath;
 	public String jdbcURL;
 	public String user;
@@ -8,7 +9,7 @@ public class Connection {
 	
 	public String toString()
 	{
-		String result = "jdbcDriverPath: " + jdbcDriverPath + ", " +
+		String result = "name: " + name + ", " + "jdbcDriverPath: " + jdbcDriverPath + ", " +
 						"jdbcURL: " + jdbcURL + ", " +
 						"user: " + user + ", " +
 						"passwd: " + passwd;
