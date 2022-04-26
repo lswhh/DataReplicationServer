@@ -223,6 +223,7 @@ public class TraceLogger
                                               (int)mFileSize,
                                               mFileCount,
                                               true);            // append
+            mLogFileHandler.setFormatter(new SimpleFormatter());
         }
         catch (SecurityException e)
         {
