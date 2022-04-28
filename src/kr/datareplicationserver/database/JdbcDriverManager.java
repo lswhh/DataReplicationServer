@@ -26,6 +26,7 @@ import javax.sql.XADataSource;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 
+import kr.datareplicationserver.configure.ConfigurationManager;
 import kr.datareplicationserver.configure.Configure;
 import kr.datareplicationserver.dataextractor.DriverInitializer;
 import kr.datareplicationserver.util.TraceLogger;
@@ -35,7 +36,7 @@ import kr.datareplicationserver.util.TraceLogger;
  */
 public class JdbcDriverManager implements DriverInitializer
 {
-	private static Configure mConf = null;
+	private static Configure mConf = ConfigurationManager.getConfigure();
     private static TraceLogger mTraceLogger = TraceLogger.getInstance();
     
     private static HashMap    mDriverMap         = new HashMap();

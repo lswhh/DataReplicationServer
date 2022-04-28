@@ -13,15 +13,26 @@ import org.json.simple.parser.ParseException;
 public class ConfigurationManager {
 
 	private String confPath;
-	private Configure conf;
+	private static Configure conf = new Configure();
+	private static ConfigurationManager confManager = new ConfigurationManager();
+	private static boolean isBuild = false;
 	
 	public ConfigurationManager() {
-		conf = new Configure();
+		isBuild = false;
 	}
 	
 	public static ConfigurationManager start()
 	{
-		return new ConfigurationManager();
+		return confManager;
+	}
+	
+	public static Configure getConfigure()
+	{
+		if ( isBuild != true )
+		{
+			throw new UnsupportedOperationException("getConfigure: isBuild is false");
+		}
+		return conf;
 	}
 	
 	public Configure build(String configurationPath ) //throws Exception
@@ -81,7 +92,8 @@ public class ConfigurationManager {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return true;
+		isBuild = true;
+		return isBuild ;
 	}
 	
 	public boolean jsonTest()
