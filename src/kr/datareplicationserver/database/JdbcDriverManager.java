@@ -73,8 +73,11 @@ public class JdbcDriverManager implements DriverInitializer
 	{
 		LinkedList<Target> targetList = new LinkedList<Target>();
 		setConfigure(conf);
+		// from jdbcDriver
 		targetList.add(getTarget(conf.from.name));
+		// to jdbcDriver
 		targetList.add(getTarget(conf.to.name));
+
 		LinkedList<Target> validTargetList = loadDrivers(targetList);
 		if ( validTargetList.isEmpty() == true )
 		{

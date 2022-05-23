@@ -11,5 +11,5 @@ import kr.datareplicationserver.configure.Configure;
  */
 public interface DBInteractor {
 	public void setConfigure(Configure conf);
-
+	public void setDriverInitializer(DriverInitializer driverInitializer);
 }
